@@ -14,7 +14,7 @@ def generateModel(X_train,Y_train,X_test,Y_test):
     model.add(Dense(10, activation='softmax'))
 
     # Compile model
-    model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
+    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
     X_train = np.array(X_train).reshape(-1,99,1)
     X_test = np.array(X_test).reshape(-1,99,1)
