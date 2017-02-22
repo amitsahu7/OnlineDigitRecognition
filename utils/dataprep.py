@@ -151,3 +151,8 @@ def createFolds(data_x, data_y, n_folds = 5):
         validation = (val_x, val_y)
         kFolds.append((train, validation))
     return kFolds
+
+def oneHotRepresentation(labels):
+    b = np.zeros((np.array(labels).size, 10))
+    b[np.arange(np.array(labels).size), labels] = 1
+    return b
